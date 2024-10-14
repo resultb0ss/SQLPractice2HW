@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SecondActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="База данных"
+        app:titleTextColor="@color/white"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <ImageButton
+            android:id="@+id/secondActivityExitButtonBTN"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_exit_24"
+            android:background="@null"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageButton
+            android:id="@+id/secondActivityBackButtonBTN"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:background="@null"
+            android:layout_marginEnd="8dp"/>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_margin="8dp">
+
+        <EditText
+            android:id="@+id/secondActivityProductIdEditTextET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Id"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="6dp"/>
+
+
+
+        <EditText
+            android:id="@+id/secondActivityProductEditTextET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Название"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="6dp"/>
+
+
+        <EditText
+            android:id="@+id/secondActivityWeightEditTextET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Вес, кг"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/secondActivityPriceEditTextET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Цена руб."
+            android:inputType="number"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="6dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/secondActivitySaveButtonBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:text="Сохранить"/>
+
+            <Button
+                android:id="@+id/secondActivityUpdateButtonBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:text="Обновить"/>
+
+
+            <Button
+                android:id="@+id/secondActivityDeleteButtonBTN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:textSize="13dp"
+                android:layout_weight="1"
+                android:text="Удалить данные"/>
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/secondActivityMainListViewLV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_list_view">
+
+        </ListView>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

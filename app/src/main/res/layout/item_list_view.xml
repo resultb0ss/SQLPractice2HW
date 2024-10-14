@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/itemListViewIdProductTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="№1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.018"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.363" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/secondGuildline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.19">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <TextView
+            android:id="@+id/itemListViewNameProductTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Бананы"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/secondGuildline"
+            app:layout_constraintVertical_bias="0.386" />
+
+        <TextView
+            android:id="@+id/itemListViewWeightTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 грамм"
+            android:textSize="18dp"
+            android:textStyle="normal"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.067"
+            app:layout_constraintStart_toEndOf="@+id/itemListViewNameProductTV" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mainGuildline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <TextView
+            android:id="@+id/itemListViewPriceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000 руб"
+            android:textSize="18dp"
+            android:textStyle="normal"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.245"
+            app:layout_constraintStart_toEndOf="@+id/itemListViewWeightTV"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
