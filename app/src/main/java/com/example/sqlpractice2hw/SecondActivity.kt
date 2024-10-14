@@ -2,6 +2,7 @@ package com.example.sqlpractice2hw
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.AdapterView
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -41,6 +42,28 @@ class SecondActivity : AppCompatActivity() {
         binding.secondActivityExitButtonBTN.setOnClickListener {
             this.finishAffinity()
         }
+
+        binding.secondActivityMainListViewLV.onItemClickListener =
+            AdapterView.OnItemClickListener(){
+            parent, view, position, id ->
+
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Внимание!")
+                    .setMessage("Предполагаемые действия")
+                    .setNegativeButton("Закрыть",null)
+                    .setPositiveButton("Удалить"){ _,_ ->
+                        val product = listViewAdapter!!.getItem(position)
+                        if (product != null) {
+                            db.deleteProduct(product)
+                        }
+                        viewDataAdapter()
+                        Toast.makeText(this,"Запись удалена!", Toast.LENGTH_SHORT).show()
+                    }
+                    .setNeutralButton("Обновить"){ _,_ -> updateRecord() }
+
+                builder.create().show()
+        }
+
 
     }
 

@@ -112,6 +112,14 @@ class DBHelper (context: Context, factory: SQLiteDatabase.CursorFactory?):
         db.close()
     }
 
+    fun deleteProductOnId(id: Int){
+        val db = this.writableDatabase
+        val contentValues = ContentValues()
+        contentValues.put(KEY_ID,id)
+        db.delete(TABLE_NAME,"id=" + id, null)
+        db.close()
+    }
+
 
 
     override fun onConfigure(db: SQLiteDatabase?) {
